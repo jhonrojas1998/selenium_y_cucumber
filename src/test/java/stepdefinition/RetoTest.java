@@ -53,11 +53,14 @@ public class RetoTest {
         WebElement enviar = driver.findElement(By.xpath("//*[@id=\"mG61Hd\"]/div[2]/div/div[3]/div[1]/div[1]/div/span/span"));
         enviar.click();
 
+
+
     }
 
     @Then("^debeo poder visualizar una modal que diga usuario registrado con exito$")
     public void debeo_poder_visualizar_una_modal_que_diga_usuario_registrado_con_exito() throws Throwable {
         //driver.quit();
+
 
     }
 }
