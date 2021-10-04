@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.concurrent.TimeUnit;
+
 public class RetoTest {
 
     private ChromeDriver driver;
@@ -28,9 +30,13 @@ public class RetoTest {
         WebElement nombresyapellidos = driver.findElement(By.xpath("//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div[1]/div/div[1]/input"));
         nombresyapellidos.click();
         nombresyapellidos.sendKeys("jhon hader rojas cabrera");
-        //WebElement edad = driver.findElement(By.xpath("//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[1]/div[1]/div[1]"));
-        //edad.click();
 
+        WebElement edad = driver.findElement(By.xpath("//form[@id='mG61Hd']/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div/div/div/span"));
+        edad.click();
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        WebElement edad23 = driver.findElement(By.xpath("//form[@id='mG61Hd']/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div[2]/div[24]/span"));
+        edad23.click();
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         WebElement hombre = driver.findElement(By.xpath("//*[@id=\"i16\"]/div[3]/div"));
         hombre.click();
         WebElement direccion = driver.findElement(By.xpath("//*[@id=\"mG61Hd\"]/div[2]/div/div[2]/div[4]/div/div/div[2]/div/div[1]/div/div[1]/input"));
@@ -46,7 +52,6 @@ public class RetoTest {
         puestointeres.click();
         WebElement enviar = driver.findElement(By.xpath("//*[@id=\"mG61Hd\"]/div[2]/div/div[3]/div[1]/div[1]/div/span/span"));
         enviar.click();
-
 
     }
 
